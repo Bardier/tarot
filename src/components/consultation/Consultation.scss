@@ -1,0 +1,39 @@
+@import "src/styles/variables";
+
+.consultation {
+}
+.consultation__slide {
+  background-color: $main-color;
+  margin: 0 auto;
+  max-width: 555px;
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  min-height: 739px;
+}
+.consultation__title {
+  text-align: center;
+  font-family: "Namu-1910", sans-serif;
+  font-size: 28px;
+  color: $sub-title-color;
+}
+.consultation__img {
+  width: 100%;
+}
+.consultation__list {
+}
+.consultation__item {
+  color: $sub-title-color;
+  text-align: center;
+}
+.consultation__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: $mobile-width) {
+  .consultation__title {
+    font-size: 24px;
+  }
+}

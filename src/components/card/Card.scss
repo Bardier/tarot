@@ -1,0 +1,51 @@
+@import "src/styles/variables";
+
+.card {
+  border: 5px solid $bg-item-color;
+  border-radius: 20px;
+  width: 300px;
+  height: 460px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $bg-card;
+}
+.card__img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+.card__text {
+  text-align: center;
+  font-family: "Namu-1910", sans-serif;
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    width: 260px;
+    height: 400px;
+  }
+
+  .slick-slide > div {
+    margin: 0;
+  }
+  .slick-list {
+    margin: 0;
+  }
+}

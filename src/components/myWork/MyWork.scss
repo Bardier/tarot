@@ -1,0 +1,10 @@
+.my-work {
+}
+.my-work__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.my-work__item {
+  text-align: center;
+}

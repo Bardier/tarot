@@ -1,0 +1,102 @@
+@import "src/styles/variables";
+
+.article {
+  padding-top: 150px;
+}
+.article .container {
+  max-width: 900px;
+}
+.article__wrapper {
+  position: relative;
+  padding: 40px 0;
+}
+.article__wrapper:before {
+  background-color: $main-color;
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+}
+.article__wrapper:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../../assets/img/old-paper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+  z-index: -1;
+}
+.article__img {
+  max-height: 300px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: -3;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.article__title {
+  color: $sub-title-color;
+  text-align: center;
+  font-family: "Namu-1910", sans-serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+  padding: 0 30px;
+}
+.article__text {
+  color: $sub-title-color;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 30px;
+}
+.article__text p {
+  color: $sub-title-color;
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.article__text li {
+  color: $sub-title-color;
+  text-align: left;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  position: relative;
+}
+.article__text li:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid $bg-item-color;
+  left: -5px;
+  top: 1px;
+}
+.article__text li:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $bg-item-color;
+  left: -5px;
+  top: 3px;
+}
+.article .section {
+  padding: 20px 0px;
+}
+.article .section-title,
+.article .phone__number {
+  font-size: 25px;
+}

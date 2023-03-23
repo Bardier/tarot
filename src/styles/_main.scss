@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: $main-color;
+}
+
+body {
+  font-family: "Namu-pro", sans-serif;
+  background-image: url("../assets/img/main-bg.jpg");
+  background-attachment: fixed;
+  background-size: 50px;
+  position: relative;
+}
+
+body.menu-open {
+  overflow-y: hidden;
+}
+
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $bg-color;
+  opacity: 0.8;
+  z-index: -10;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $container;
+  padding: 0 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.mobile-hide {
+  display: block;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  font-family: "Namu-1910", sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.text-hover {
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: $bg-color;
+  -webkit-text-fill-color: $main-color;
+  transition: -webkit-text-stroke-color $transition,
+    -webkit-text-fill-color $transition;
+}
+.text-hover:hover {
+  -webkit-text-stroke-color: $main-color;
+  -webkit-text-fill-color: $bg-color;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+.slick-arrow {
+  z-index: 100;
+}
+.slick-arrow:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-image: url("../assets/img/consultation/arrow.png");
+  background-size: cover;
+}
+.slick-prev {
+  left: 150px;
+}
+.slick-prev:before {
+  transform: rotate(180deg);
+  right: 0;
+}
+.slick-next:before {
+  left: 0;
+}
+.slick-next {
+  right: 150px;
+}
+@media screen and (max-width: $mobile-width) {
+  .mobile-hide {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .slick-dots li {
+    margin: 0 20px;
+  }
+  .slick-dots li button:before {
+    background-color: $sub-color;
+    content: "";
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .slick-prev {
+    left: 60px;
+  }
+  .slick-next {
+    right: 60px;
+  }
+}
