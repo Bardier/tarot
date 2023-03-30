@@ -22,7 +22,6 @@ export const Article: FC = () => {
                 </div>
             `
         }
-
     }, [])
 
 

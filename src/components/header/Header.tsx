@@ -4,7 +4,8 @@ import { animateScroll } from 'react-scroll';
 import './Header.scss'
 
 export const Header:FC = () => {
-    const menuBtnRef = useRef<HTMLButtonElement>(null)
+    const menuBtnRef = useRef<HTMLButtonElement>(null);
+    const menuBtnSpanRef = useRef<HTMLSpanElement>(null);
     const [isUp, setIsUp] = useState(false);
 
     const handleScroll = () => {
@@ -21,13 +22,13 @@ export const Header:FC = () => {
 
     useEffect(() => {
         window.addEventListener('click', ({target}) => {
-            if(target && target !== menuBtnRef.current) {
+            if(target && target !== menuBtnRef.current && target !== menuBtnSpanRef.current) {
                 document.body.classList.remove('menu-open');
             }
         })
 
         return () => window.removeEventListener('click', ({target}) => {
-            if(target && target !== menuBtnRef.current) {
+            if(target && target !== menuBtnRef.current && target !== menuBtnSpanRef.current) {
                 document.body.classList.remove('menu-open');
             }
         })
@@ -38,10 +39,12 @@ export const Header:FC = () => {
     }
 
     const scrollToSection = (sectionName: string) => {
-        const target = document.querySelector(`#${sectionName}`)
-        if(target) {
-            animateScroll.scrollTo(target.getBoundingClientRect().top);
-        }
+        setTimeout(() => {
+            const target = document.querySelector(`#${sectionName}`)
+            if(target) {
+                    animateScroll.scrollTo(target.getBoundingClientRect().top);
+            }
+        }, 200)
     };
 
     return <header className='header'>
@@ -69,7 +72,7 @@ export const Header:FC = () => {
             <button className='nav__toggle'
                     onClick={menuHandler}
                     ref={menuBtnRef}
-            ><span></span></button>
+            ><span ref={menuBtnSpanRef}></span></button>
         </nav>
         {isUp && <button className='scroll-top'
                          onClick={() => animateScroll.scrollToTop()}
