@@ -10,7 +10,7 @@ export const About: FC = () => {
                 Про мене
             </h2>
             <p className="about__text">
-                Мене звати Ольга і я кваліфікований <Link to='/' className='about__link'>таролог</Link>.
+                Мене звати Ольга і я кваліфікований <Link to='/blog/who-is-a-tarot-reader' className='about__link'>таролог</Link>.
             </p>
             <p className="about__text">
                 Звернувшись до мене ви отримаєте професійну консультацію з відповідями на питання, які вас турбують.
