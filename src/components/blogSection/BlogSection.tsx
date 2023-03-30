@@ -3,9 +3,24 @@ import Slider from "react-slick";
 import './BlogSection.scss'
 import {BlogCard} from "./blogCard/BlogCard";
 
-import blogImg1 from '../../assets/img/blog/program-candles.jpg'
+import {dataBs} from "../../data-bs";
 
 export const BlogSection: FC = () => {
+
+    const dateDataBs = dataBs.filter((article) => {
+        const currentDate = new Date();
+        const articleDate = new Date(article.date.split('.').reverse().join('.'))
+        return articleDate < currentDate
+    })
+
+    const renderBlogList = dateDataBs.map((article)=>{
+        return <div key={article.id}>
+            <div className='custom-slide' >
+                <BlogCard {...article}/>
+            </div>
+        </div>
+    })
+
     const settings = {
         className: "center",
         centerMode: true,
@@ -35,31 +50,7 @@ export const BlogSection: FC = () => {
                 Ласкаво прошу до мого блогу! Тут ви дізнаєтеся про тарологію та її потужний вплив на життя.
             </p>
             <Slider {...settings} className='blog-section__slider'>
-                <div>
-                    <div className='custom-slide'>
-                        <BlogCard img={blogImg1} title='Програмні свічки: Секрет досягнення цілей' date='22 березня, 2023' text='Ви коли-небудь чули про програмні свічки? Це може звучати як щось фантастичне, але насправді ці свічки є потужним інструментом для...' link='/'/>
-                    </div>
-                </div>
-                <div>
-                    <div className='custom-slide'>
-                        <BlogCard img={blogImg1} title='Програмні свічки: Секрет досягнення цілей' date='22 березня, 2023' text='Ви коли-небудь чули про програмні свічки? Це може звучати як щось фантастичне, але насправді ці свічки є потужним інструментом для...' link='/'/>
-                    </div>
-                </div>
-                <div>
-                    <div className='custom-slide'>
-                        <BlogCard img={blogImg1} title='Програмні свічки: Секрет досягнення цілей' date='22 березня, 2023' text='Ви коли-небудь чули про програмні свічки? Це може звучати як щось фантастичне, але насправді ці свічки є потужним інструментом для...' link='/'/>
-                    </div>
-                </div>
-                <div>
-                    <div className='custom-slide'>
-                        <BlogCard img={blogImg1} title='Програмні свічки: Секрет досягнення цілей' date='22 березня, 2023' text='Ви коли-небудь чули про програмні свічки? Це може звучати як щось фантастичне, але насправді ці свічки є потужним інструментом для...' link='/'/>
-                    </div>
-                </div>
-                <div>
-                    <div className='custom-slide'>
-                        <BlogCard img={blogImg1} title='Програмні свічки: Секрет досягнення цілей' date='22 березня, 2023' text='Ви коли-небудь чули про програмні свічки? Це може звучати як щось фантастичне, але насправді ці свічки є потужним інструментом для...' link='/'/>
-                    </div>
-                </div>
+                {renderBlogList}
             </Slider>
         </div>
     </section>
