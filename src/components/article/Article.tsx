@@ -7,6 +7,10 @@ import {dataBs} from "../../data-bs";
 
 export const Article: FC = () => {
     const { articleId } = useParams();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const articleWrapperRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
