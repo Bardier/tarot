@@ -103,7 +103,13 @@
 }
 
 @media (max-width: $mobile-width) {
+  .article {
+    padding: 0;
+  }
   .article__img {
     max-width: 80%;
+  }
+  .article__wrapper {
+    padding-top: 60px;
   }
 }

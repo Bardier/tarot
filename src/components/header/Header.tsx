@@ -51,22 +51,22 @@ export const Header:FC = () => {
         <nav className='nav'>
             <ul className='container nav__list'>
                 <li className='nav__item'>
-                    <Link to='/' className='nav__link text-hover'
+                    <Link to='/' className='nav__link '
                           onClick={() => scrollToSection('about')}
                     >Про мене</Link>
                 </li>
                 <li className='nav__item'>
-                    <Link to='/' className='nav__link text-hover'
+                    <Link to='/' className='nav__link '
                           onClick={() => scrollToSection('services')}
                     >Послуги</Link>
                 </li>
                 <li className='nav__item'>
-                    <Link to='/' className='nav__link text-hover'
+                    <Link to='/' className='nav__link '
                           onClick={() => scrollToSection('rites')}
                     >Обряди</Link>
                 </li>
                 <li className='nav__item'>
-                    <NavLink to='/blog' className='nav__link text-hover'>Блог</NavLink>
+                    <NavLink to='/blog' className='nav__link '>Блог</NavLink>
                 </li>
             </ul>
             <button className='nav__toggle'
