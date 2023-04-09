@@ -5,6 +5,7 @@ import {HomePage} from "./pages/HomePage";
 import {BlogPage} from "./pages/BlogPage";
 import {Footer} from "./components/footer/Footer";
 import {ArticlePage} from "./pages/ArticlePage";
+import {ErrorPage} from "./pages/ErrorPage";
 import './styles/style.scss'
 
 export const App = () => {
@@ -15,7 +16,7 @@ export const App = () => {
               <Route path="/" element={<HomePage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:articleId" element={<ArticlePage />} />
-              {/*<Route path="*" element={<Error />} />*/}
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
           </main>
         <Footer/>
