@@ -17,7 +17,7 @@ export const About: FC = () => {
                 За допомогою <Link to='/' className='about__link'>Таро</Link> я можу проаналізувати ваше життя, спрямувати ваші майбутні дії, вказати на помилки та вилікувати ваші душевні хвороби.
             </p>
             <p className="about__text">
-                У своїй практиці послуговуюся знаннями з <Link to='/' className='about__link'>нумерології</Link> та працюю з <Link to='/' className='about__link'>Натальними картами</Link>. Використовую систему передбачень <Link to='/' className='about__link'>Картами Ленорман</Link>, розроблену сумісно з нумерологією. Даю глибинний аналіз питань за допомогою <Link to='/' className='about__link'>тактики 78 дверей</Link>.
+                У своїй практиці послуговуюся знаннями з <Link to='/blog/numerology-the-secret-of-numbers' className='about__link'>нумерології</Link> та працюю з <Link to='/' className='about__link'>Натальними картами</Link>. Використовую систему передбачень <Link to='/' className='about__link'>Картами Ленорман</Link>, розроблену сумісно з нумерологією. Даю глибинний аналіз питань за допомогою <Link to='/' className='about__link'>тактики 78 дверей</Link>.
             </p>
             <p className="about__text">
                 Я пропоную послуги з перегляду всіх сфер життя. Таких, як:
