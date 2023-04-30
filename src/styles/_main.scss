@@ -6,19 +6,15 @@
 }
 
 body {
-  font-family: "Namu-pro", sans-serif;
-  background-image: url("../assets/img/main-bg.jpg");
+  font-family: 'Namu-pro', sans-serif;
+  background-image: url('../assets/img/main-bg.jpg');
   background-attachment: fixed;
   background-size: 50px;
   position: relative;
 }
 
-body.menu-open {
-  overflow-y: hidden;
-}
-
 body:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
@@ -27,12 +23,6 @@ body:after {
   background-color: $bg-color;
   opacity: 0.9;
   z-index: -10;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 .main {
@@ -59,7 +49,7 @@ body:after {
 
 .section-title {
   font-size: 32px;
-  font-family: "Namu-1910", sans-serif;
+  font-family: 'Namu-1910', sans-serif;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -71,6 +61,7 @@ body:after {
   transition: -webkit-text-stroke-color $transition,
     -webkit-text-fill-color $transition;
 }
+
 .text-hover:hover {
   -webkit-text-stroke-color: $main-color;
   -webkit-text-fill-color: $bg-color;
@@ -79,36 +70,48 @@ body:after {
 .slick-slide > div {
   margin: 0 10px;
 }
+
 .slick-list {
   margin: 0 -10px;
 }
+
 .slick-arrow {
   z-index: 100;
 }
+
 .slick-arrow:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
   display: block;
   width: 80px;
   height: 80px;
-  background-image: url("../assets/img/consultation/arrow.png");
+  background-image: url('../assets/img/consultation/arrow.png');
   background-size: cover;
 }
+
 .slick-prev {
   left: 150px;
 }
+
 .slick-prev:before {
   transform: rotate(180deg);
   right: 0;
 }
+
 .slick-next:before {
   left: 0;
 }
+
 .slick-next {
   right: 150px;
 }
+
+.slick-center .custom-slide {
+  margin-top: 200px;
+}
+
 @media screen and (max-width: $mobile-width) {
   .mobile-hide {
     display: none;
@@ -123,7 +126,7 @@ body:after {
   }
   .slick-dots li button:before {
     background-color: $sub-color;
-    content: "";
+    content: '';
     border-radius: 50%;
   }
 }
@@ -134,5 +137,11 @@ body:after {
   }
   .slick-next {
     right: 60px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .slick-center .custom-slide {
+    margin-top: 0;
   }
 }
