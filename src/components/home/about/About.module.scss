@@ -1,0 +1,73 @@
+@import 'src/styles/variables';
+
+.about {
+  font-size: 18px;
+}
+
+.about__text {
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.about__link {
+  color: $sub-color;
+  transition: color $transition;
+}
+
+.about__link:hover {
+  color: $link-color-hover;
+}
+
+.about__list {
+  padding-left: 50px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.about__item {
+  position: relative;
+}
+
+.about__moon {
+  position: absolute;
+  border: 2px solid $bg-item-color;
+  border-radius: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  left: -30px;
+  top: 0px;
+}
+
+.about__moon:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: $bg-item-color;
+  border-radius: 50%;
+  left: -2px;
+  top: 1px;
+  animation-name: moon;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes moon {
+  0% {
+    left: -15px;
+  }
+  50% {
+    left: -2px;
+  }
+  100% {
+    left: -15px;
+  }
+}

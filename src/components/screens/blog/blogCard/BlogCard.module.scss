@@ -1,0 +1,44 @@
+@import "src/styles/variables";
+
+.blogCard {
+}
+.blogCard__img {
+  width: 100%;
+  height: auto;
+}
+.blogCard__wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.blogCard__title {
+  color: #000000;
+  font-family: "Namu-1910", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.blogCard__data {
+  color: #000000;
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.blogCard__text {
+  color: #000000;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.blogCard__text p,
+.blogCard__text li {
+  color: #000000;
+}
+.blogCard__link {
+  padding: 2px;
+  color: #ffffff;
+  text-align: left;
+  font-size: 12px;
+  background-color: $bg-item-color;
+}
