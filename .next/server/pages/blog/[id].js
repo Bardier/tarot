@@ -33,7 +33,8 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ _id_),
-  "getServerSideProps": () => (/* binding */ getServerSideProps)
+  "getStaticPaths": () => (/* binding */ getStaticPaths),
+  "getStaticProps": () => (/* binding */ getStaticProps)
 });
 
 // EXTERNAL MODULE: external "react/jsx-runtime"
@@ -121,14 +122,44 @@ const ArticlePage = ({ data  })=>{
     });
 };
 /* harmony default export */ const _id_ = (ArticlePage);
-async function getServerSideProps({ params  }) {
-    const data = data_bs/* dataBs.find */.L.find((article)=>article.link === params.id);
+const getStaticPaths = async ()=>{
+    const paths = data_bs/* dataBs.map */.L.map(({ link  })=>({
+            params: {
+                id: link.toString()
+            }
+        }));
+    console.log("data: ", paths);
+    return {
+        paths,
+        fallback: false
+    };
+};
+const getStaticProps = async (context)=>{
+    const id = context.params?.id;
+    if (!id) {
+        return {
+            notFound: true
+        };
+    }
+    let data;
+    data_bs/* dataBs.forEach */.L.forEach((el)=>{
+        if (el.link === id) {
+            data = {
+                ...el
+            };
+        }
+    });
+    if (!data) {
+        return {
+            notFound: true
+        };
+    }
     return {
         props: {
-            data
+            data: data
         }
     };
-}
+};
 
 
 /***/ }),
