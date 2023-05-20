@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 export const Error: FC = () => {
     return <section className='section error'>
         <div className="container">
-            <img src={errorImg} className='error__img' alt="Цієї сторінки не існує."/>
+            <img src={errorImg} className='error__img' alt="Цієї сторінки не існує." width={600} height={360}/>
             <h1 className='error__title'>
                 Сторінка не знайдена
             </h1>

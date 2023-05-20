@@ -35,7 +35,7 @@ export const Consultation: FC = () => {
                         <h3 className="consultation__title">
                             Кохання. Відносини
                         </h3>
-                        <img src={loveImg} alt="Кохання. Відносини" className='consultation__img'/>
+                        <img src={loveImg} alt="Кохання. Відносини" className='consultation__img' width={535} height={320}/>
                         <ul className="consultation__list">
                             <li className="consultation__item">
                                 Що людина про мене думає?
@@ -77,7 +77,7 @@ export const Consultation: FC = () => {
                         <h3 className="consultation__title">
                             Робота. Кар’єра. Гроші
                         </h3>
-                        <img src={moneyImg} alt="Робота. Кар’єра. Гроші" className='consultation__img'/>
+                        <img src={moneyImg} alt="Робота. Кар’єра. Гроші" className='consultation__img' width={535} height={320}/>
                         <ul className="consultation__list">
                             <li className="consultation__item">
                                 Йти з роботи чи ні?
@@ -118,7 +118,7 @@ export const Consultation: FC = () => {
                         <h3 className="consultation__title">
                             Вихід із кризових ситуацій
                         </h3>
-                        <img src={crisisImg} alt="Вихід із кризових ситуацій" className='consultation__img'/>
+                        <img src={crisisImg} alt="Вихід із кризових ситуацій" className='consultation__img' width={535} height={320}/>
                         <ul className="consultation__list">
                             <li className="consultation__item">
                                 Перегляд причин виникнення цих подій,

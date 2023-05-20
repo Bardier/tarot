@@ -22,7 +22,7 @@ export const Info: FC = () => {
         </div>
         <a href='tel:+380507823854' className="info__link text-hover">
             +380 50 782 38 54
-            <img src={phone} alt="phone" className='info__phone'/>
+            <img src={phone} alt="phone" className='info__phone' width={50} height={45}/>
         </a>
         </div>
     </section>

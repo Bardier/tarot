@@ -94,6 +94,23 @@
   left: -5px;
   top: 3px;
 }
+.article li img {
+  height: auto;
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+  z-index: -3;
+  display: block;
+  margin: 0 auto;
+}
+.article li:has(img){
+  padding: 0;
+}
+.article li:has(img):after,
+.article li:has(img):before{
+  display: none;
+}
+
 .article .section {
   padding: 20px 0px;
 }

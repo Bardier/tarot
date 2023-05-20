@@ -22,7 +22,7 @@ export const BlogCard: FC<BlogCardProps> = ({img, text, caption, date, link}) =>
 
     return <div className='blog-card'>
         <Link to={'/blog/' + link}>
-            <img src={img} alt={caption} className="blog-card__img"/>
+            <img src={img} alt={caption} width={420} height={280} className="blog-card__img"/>
             <div className="blog-card__wrapper">
                 <h3 className="blog-card__title">{caption}</h3>
                 <p className='blog-card__data'>{date}</p>

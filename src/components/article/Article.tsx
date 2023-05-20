@@ -30,7 +30,7 @@ export const Article: FC = () => {
                 description: article.description
             })
             articleWrapperRef.current.innerHTML = `
-                <img src="../.${article.img}" alt="${article.caption}" class="article__img"/>
+                <img src="../.${article.img}" alt="${article.caption}" class="article__img" width="420" height="280"/>
                 <h1 class="article__title">
                     ${article.caption}
                 </h1>

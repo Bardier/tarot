@@ -14,10 +14,10 @@ export const About: FC = () => {
             </p>
             <p className="about__text">
                 Звернувшись до мене ви отримаєте професійну консультацію з відповідями на питання, які вас турбують.
-                За допомогою <Link to='/' className='about__link'>Таро</Link> я можу проаналізувати ваше життя, спрямувати ваші майбутні дії, вказати на помилки та вилікувати ваші душевні хвороби.
+                За допомогою <Link to='/blog/the-history-of-the-tarot' className='about__link'>Таро</Link> я можу проаналізувати ваше життя, спрямувати ваші майбутні дії, вказати на помилки та вилікувати ваші душевні хвороби.
             </p>
             <p className="about__text">
-                У своїй практиці послуговуюся знаннями з <Link to='/blog/numerology-the-secret-of-numbers' className='about__link'>нумерології</Link> та працюю з <Link to='/' className='about__link'>Натальними картами</Link>. Використовую систему передбачень <Link to='/' className='about__link'>Картами Ленорман</Link>, розроблену сумісно з нумерологією. Даю глибинний аналіз питань за допомогою <Link to='/' className='about__link'>тактики 78 дверей</Link>.
+                У своїй практиці послуговуюся знаннями з <Link to='/blog/numerology-the-secret-of-numbers' className='about__link'>нумерології</Link> та працюю з <Link to='/' className='about__link'>Натальними картами</Link>. Використовую систему передбачень <Link to='/blog/fortune-telling-deck-tarot-lenormand' className='about__link'>Картами Ленорман</Link>, розроблену сумісно з нумерологією. Даю глибинний аналіз питань за допомогою <Link to='/' className='about__link'>тактики 78 дверей</Link>.
             </p>
             <p className="about__text">
                 Я пропоную послуги з перегляду всіх сфер життя. Таких, як:
