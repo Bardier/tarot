@@ -1,6 +1,8 @@
 import {FC, useEffect, useRef, useState} from "react";
 import {Link, NavLink} from "react-router-dom";
 import { animateScroll } from 'react-scroll';
+import {ReactComponent as FacebookIcon} from "../../assets/img/icons/facebook.svg";
+import {ReactComponent as AsideFacebookIcon} from "../../assets/img/icons/aside-facebook.svg";
 import './Header.scss'
 
 export const Header:FC = () => {
@@ -68,15 +70,21 @@ export const Header:FC = () => {
                 <li className='nav__item'>
                     <NavLink to='/blog' className='nav__link '>Блог</NavLink>
                 </li>
+                <li className='nav__item'>
+                    <NavLink to='https://www.facebook.com/people/%D0%A2%D0%B0%D1%80%D0%BE%D0%BB%D0%BE%D0%B3-%D0%9E%D0%BB%D1%8C%D0%B3%D0%B0/100092397730608/' target='_blank' className='nav__link nav__link--facebook'><FacebookIcon/></NavLink>
+                </li>
             </ul>
             <button className='nav__toggle'
                     onClick={menuHandler}
                     ref={menuBtnRef}
             ><span ref={menuBtnSpanRef}></span></button>
         </nav>
-        {isUp && <button className='scroll-top'
-                         onClick={() => animateScroll.scrollToTop()}
-        >В гору
-        </button>}
+        {isUp && <>
+            <NavLink to='https://www.facebook.com/people/%D0%A2%D0%B0%D1%80%D0%BE%D0%BB%D0%BE%D0%B3-%D0%9E%D0%BB%D1%8C%D0%B3%D0%B0/100092397730608/' target='_blank' className='aside-facebook scroll-top'><AsideFacebookIcon/></NavLink>
+            <button className='scroll-top'
+                    onClick={() => animateScroll.scrollToTop()}
+            >В гору
+            </button>
+        </>}
     </header>
 }

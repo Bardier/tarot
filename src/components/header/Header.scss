@@ -36,6 +36,11 @@
   cursor: pointer;
 }
 
+.aside-facebook{
+  bottom: 80px;
+  background: none;
+}
+
 .nav__link {
   position: relative;
   padding-bottom: 20px;
@@ -80,6 +85,15 @@
 .nav__toggle {
   display: none;
   cursor: pointer;
+}
+
+.nav__link--facebook:after{
+  display: none;
+}
+
+.nav__link--facebook svg {
+  width: 70px;
+  height: 30px;
 }
 
 @media screen and (max-width: $mobile-width) {
