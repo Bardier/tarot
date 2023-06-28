@@ -10,6 +10,18 @@
   font-family: "Namu-1910", sans-serif;
 }
 
+@media screen and (max-width: 1280px) {
+  .footer {
+    padding: 220px 0 0;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .footer {
+    padding: 320px 0 0;
+  }
+}
+
 @media screen and (max-width: 840px) {
   .footer {
     padding: 60px 0 0;
